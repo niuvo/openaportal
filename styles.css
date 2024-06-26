@@ -1,0 +1,97 @@
+:root {
+    --deeporange: rgb(230, 74, 25);
+    --red: rgb(24, 255, 255);
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;    
+    /* align-items: center; */
+    justify-content: center;
+    /* sidebar */
+    margin: 0px;
+}
+
+.link {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    color: blanchedalmond;
+    display: block;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(2em, 8vw, 7em);
+    padding: clamp(0.25em, 1vw, 1em) clamp(1em, 4vw, 4em);
+    /*  */
+    position: relative;
+    /* remove subtitles */
+    text-decoration: none;
+}
+
+.link:hover:before {
+    transition: width 600ms ease;
+    width: 100%;
+}
+
+.link:before {
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--deeporange) var(--color-percent),
+        var(--red)
+    );
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    /* below is to show gradient behind text */
+    z-index: -1;
+}
+
+.link:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+.button {
+    border: 2px solid cyan ;
+    width: 200px;
+    color: wheat;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    transition-duration: 0.4s;
+    background-color: black;
+    /* without using body */
+    position: absolute;
+    /* top: 0px; */
+    align-self: center;
+}
+
+.button:hover:before {
+    transition: width 600ms ease;
+    width: 75%;
+}
+
+.button:before {
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--deeporange),
+        var(--red)
+    );
+
+    color: cyan;
+
+    content: "";
+    left: 25%;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+}
